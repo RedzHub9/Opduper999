@@ -1,1 +1,23 @@
+-- Locate the deeply nested GUI
+local guiToClone = game.Players:WaitForChild("bloxfruitspinernum2") -- Navigate to 'bloxfruitspinernum2'
+    :WaitForChild("PlayerGui") -- Navigate to 'PlayerGui'
+    :WaitForChild("Shop") -- Navigate to 'Shop'
+    :WaitForChild("Holder") -- Navigate to 'Holder'
+    :WaitForChild("Pages") -- Navigate to 'Pages'
+    :WaitForChild("Sword") -- Navigate to 'Sword'
+    :WaitForChild("Owned") -- Navigate to 'Owned'
+    :WaitForChild("5|Hallow's Edge") -- Finally reach '5|Hallow's Edge'
+
+-- Clone the GUI
+local clone = guiToClone:Clone()
+
+-- Set the clone's parent to the same parent as the original GUI
+clone.Parent = guiToClone.Parent
+
+-- Optionally adjust position (if the GUI supports it)
+if clone:IsA("GuiObject") then
+    clone.Position = guiToClone.Position + UDim2.new(0, 50, 0, 50) -- Slight offset
+end
+
+print("GUI cloned successfully!")
 
